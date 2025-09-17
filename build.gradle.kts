@@ -32,9 +32,6 @@ publishing {
 	publications {
 		create<MavenPublication>("mavenJava") {
 			from(components["java"])
-			 groupId = "io.comeandcommue.lib"
-			 artifactId = "web-lib"
-			 version = "0.0.1-SNAPSHOT"
 		}
 	}
 }
