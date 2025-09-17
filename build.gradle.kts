@@ -24,22 +24,17 @@ publishing {
 			name = "GitHubPackages"
 			url = uri("https://maven.pkg.github.com/tmdghks2515/comeandcommue.lib.web-lib")
 			credentials {
-				// gradle.properties의 gpr.user / gpr.key 사용
-				username = (findProperty("gpr.user") as String?) ?: ""
-				password = (findProperty("gpr.key") as String?) ?: ""
-				// GitHub Actions 등을 쓴다면 환경변수도 함께 고려 가능:
-				// username = (findProperty("gpr.user") as String?) ?: System.getenv("GITHUB_ACTOR") ?: ""
-				// password = (findProperty("gpr.key") as String?) ?: System.getenv("GITHUB_TOKEN") ?: ""
+				 username = (findProperty("gpr.user") as String?) ?: System.getenv("GITHUB_ACTOR") ?: ""
+				 password = (findProperty("gpr.key") as String?) ?: System.getenv("GITHUB_TOKEN") ?: ""
 			}
 		}
 	}
 	publications {
 		create<MavenPublication>("mavenJava") {
 			from(components["java"])
-			// 필요시 명시:
-			// groupId = "com.your.group"
-			// artifactId = "your-artifact"
-			// version = "0.1.0"
+			 groupId = "io.comeandcommue.lib"
+			 artifactId = "web-lib"
+			 version = "0.0.1"
 		}
 	}
 }
@@ -47,6 +42,7 @@ publishing {
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.auth0:java-jwt:4.4.0")
+	compileOnly("org.springframework.boot:spring-boot-starter-data-jpa:3.5.0")
 	compileOnly("org.projectlombok:lombok:1.18.30")
 	annotationProcessor("org.projectlombok:lombok:1.18.30")
 }
