@@ -1,4 +1,4 @@
-package io.comeandcommue.lib.web.loginUser;
+package io.comeandcommue.web.loginUser;
 
 public enum DeviceType {
     ANDROID, IOS, WEB

@@ -1,4 +1,4 @@
-package io.comeandcommue.lib.web.loginUser;
+package io.comeandcommue.web.loginUser;
 
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;

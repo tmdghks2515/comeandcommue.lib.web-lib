@@ -1,4 +1,4 @@
-package io.comeandcommue.lib.web.loginUser;
+package io.comeandcommue.web.loginUser;
 
 public record UserPrincipal(
         String id,

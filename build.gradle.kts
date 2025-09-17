@@ -1,11 +1,11 @@
 plugins {
-	java
-	id("org.springframework.boot") version "3.5.5"
+	id("java-library")
 	id("io.spring.dependency-management") version "1.1.7"
+	id("org.springframework.boot") version "3.5.0"
 	id("maven-publish")
 }
 
-group = "io.comeandcommue.lib"
+group = "io.comeandcommue"
 version = "0.0.1-SNAPSHOT"
 
 java {
@@ -22,7 +22,7 @@ publishing {
 	repositories {
 		maven {
 			name = "GitHubPackages"
-			url = uri("https://maven.pkg.github.com/tmdghks2515/comeandcommue.lib.web")
+			url = uri("https://maven.pkg.github.com/tmdghks2515/comeandcommue.web-lib")
 			credentials {
 				// gradle.properties의 gpr.user / gpr.key 사용
 				username = (findProperty("gpr.user") as String?) ?: ""
@@ -51,6 +51,10 @@ dependencies {
 	annotationProcessor("org.projectlombok:lombok:1.18.30")
 }
 
-tasks.withType<Test> {
-	useJUnitPlatform()
+tasks.named<org.springframework.boot.gradle.tasks.bundling.BootJar>("bootJar") {
+	enabled = false
+}
+
+tasks.named<org.gradle.jvm.tasks.Jar>("jar") {
+	enabled = true
 }

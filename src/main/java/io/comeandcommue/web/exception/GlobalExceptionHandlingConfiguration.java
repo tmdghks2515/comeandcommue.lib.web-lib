@@ -1,4 +1,4 @@
-package io.comeandcommue.lib.web.exception;
+package io.comeandcommue.web.exception;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
