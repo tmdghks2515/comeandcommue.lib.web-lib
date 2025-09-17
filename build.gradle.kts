@@ -5,7 +5,7 @@ plugins {
 	id("maven-publish")
 }
 
-group = "io.comeandcommue"
+group = "io.comeandcommue.lib"
 version = "0.0.1-SNAPSHOT"
 
 java {
@@ -22,7 +22,7 @@ publishing {
 	repositories {
 		maven {
 			name = "GitHubPackages"
-			url = uri("https://maven.pkg.github.com/tmdghks2515/comeandcommue.web-lib")
+			url = uri("https://maven.pkg.github.com/tmdghks2515/comeandcommue.lib.web-lib")
 			credentials {
 				// gradle.properties의 gpr.user / gpr.key 사용
 				username = (findProperty("gpr.user") as String?) ?: ""

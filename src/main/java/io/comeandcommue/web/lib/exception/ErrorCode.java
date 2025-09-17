@@ -1,4 +1,4 @@
-package io.comeandcommue.web.exception;
+package io.comeandcommue.web.lib.exception;
 
 public enum ErrorCode {
     BAD_REQUEST(400, "C400", "잘못된 요청입니다."),
