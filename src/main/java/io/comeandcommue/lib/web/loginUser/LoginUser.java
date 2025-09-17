@@ -1,4 +1,4 @@
-package io.comeandcommue.web.lib.loginUser;
+package io.comeandcommue.lib.web.loginUser;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

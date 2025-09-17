@@ -1,4 +1,4 @@
-package io.comeandcommue.web.lib.loginUser;
+package io.comeandcommue.lib.web.loginUser;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;

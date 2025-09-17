@@ -1,4 +1,4 @@
-package io.comeandcommue.web.lib.exception;
+package io.comeandcommue.lib.web.exception;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

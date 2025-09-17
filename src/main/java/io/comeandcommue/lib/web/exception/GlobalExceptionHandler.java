@@ -1,4 +1,4 @@
-package io.comeandcommue.web.lib.exception;
+package io.comeandcommue.lib.web.exception;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
