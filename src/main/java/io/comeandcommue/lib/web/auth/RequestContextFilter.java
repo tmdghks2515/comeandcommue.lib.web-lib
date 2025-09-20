@@ -1,4 +1,4 @@
-package io.comeandcommue.lib.web.authContext;
+package io.comeandcommue.lib.web.auth;
 
 import jakarta.servlet.*;
 import jakarta.servlet.http.Cookie;

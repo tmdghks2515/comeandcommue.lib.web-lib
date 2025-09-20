@@ -1,4 +1,4 @@
-package io.comeandcommue.lib.web.authContext;
+package io.comeandcommue.lib.web.auth;
 
 public enum DeviceType {
     ANDROID, IOS, WEB

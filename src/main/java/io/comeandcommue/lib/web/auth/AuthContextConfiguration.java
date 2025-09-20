@@ -1,13 +1,17 @@
-package io.comeandcommue.lib.web.authContext;
+package io.comeandcommue.lib.web.auth;
 
 import io.comeandcommue.lib.web.baseEntity.ThreadLocalAuditorAware;
+import lombok.RequiredArgsConstructor;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.domain.AuditorAware;
 
+
 @Configuration
+@RequiredArgsConstructor
 public class AuthContextConfiguration {
+
     @Bean
     public AuditorAware<String> auditorAware() {
         return new ThreadLocalAuditorAware();
